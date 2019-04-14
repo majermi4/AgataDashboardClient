@@ -16,11 +16,11 @@ export default {
         paddingLeft: '15px',
     }),
     sidebarItems : css({
-        '& .selected > a': css({
+        '& a.selected > a': css({
             color: '#f16c69',
             backgroundColor: '#f9f9f9'
         }),
-        '& .selected > .subItems': css({
+        '& a.selected + .subItems': css({
             display: 'block',
         })
     }),

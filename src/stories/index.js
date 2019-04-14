@@ -7,6 +7,8 @@ import Tasks from '../Components/Tasks/Tasks';
 import Button from '../Components/Buttons/Button';
 import SidebarMenu from "../Components/SidebarMenu/SidebarMenu";
 import { applyGlobalCss} from "./../GlobalCss";
+import { BrowserRouter as Router } from "react-router-dom";
+import SidebarMenuConfig from '../SidebarMenuConfig'
 
 applyGlobalCss();
 
@@ -21,6 +23,7 @@ storiesOf('Tasks', module)
     ));
 
 storiesOf('Main menu', module)
+    .addDecorator(storyFn => <Router>{storyFn()}</Router>)
     .add('Full menu', () => (
-        <SidebarMenu></SidebarMenu>
+        <SidebarMenu sidebarMenuConfig={SidebarMenuConfig}></SidebarMenu>
     ));

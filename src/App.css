@@ -1,3 +1,9 @@
 body {
     background: #efefef;
 }
+.leftColumn {
+    float: left;
+}
+.rightColumn {
+    float: left;
+}
